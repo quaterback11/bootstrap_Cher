@@ -1,0 +1,72 @@
+body {
+  padding-top: 20px;
+  &:before {
+    z-index: 10001;
+    line-height: 20px;
+    font-weight: bold;
+    text-align: center;
+    position: fixed;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: limegreen;
+    content: "Xsmall";
+  }
+  @include media-breakpoint-up(sm) {
+    &:before {
+      content: "small";
+      background: #f00;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    font-size: $font-size-base;
+    &:before {
+      content: "middle";
+      background: green;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &:before {
+      content: "Large";
+      background: turquoise;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    &:before {
+      content: "XLarge";
+      background: #f09;
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    &:before {
+      content: "XXLarge";
+      background: #90f;
+    }
+  }
+}
+
+body {
+  h1 {
+    @include textFont(700, 30px, 34px, $colorBlack);
+  }
+  h2 {
+    @include textFont(700, 20px, 24px, $colorBlack2);
+  }
+  span {
+    @include textFont(400, 16px, 20px, $colorGray);
+  }
+  p {
+    @include textFont(300, 16px, 25px, $colorGray2);
+  }
+}
+
+.header-wrapper {
+  width: 100%;
+  background: $backgroundWhite;
+  height: 590px;
+  span {
+    text-transform: uppercase;
+  }
+}
