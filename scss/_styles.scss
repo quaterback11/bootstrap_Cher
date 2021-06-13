@@ -50,6 +50,7 @@ body {
 body {
   h1 {
     @include textFont(700, 30px, 34px, $colorBlack);
+    text-transform: uppercase;
   }
   h2 {
     @include textFont(700, 20px, 24px, $colorBlack2);
@@ -68,5 +69,164 @@ body {
   height: 590px;
   span {
     text-transform: uppercase;
+    margin-top: 60px;
+    margin-bottom: 25px;
   }
+  h1 {
+    position: relative;
+    margin-bottom: 50px;
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      bottom: -13px;
+      left: calc(50% - 100px);
+      width: 170px;
+      height: 3px;
+      background: $colorYellow2;
+    }
+    // border-bottom: 3px solid $colorYellow2;
+  }
+}
+.text-intro {
+  p {
+    display: block;
+    margin-bottom: 195px;
+  }
+}
+.article {
+  h2 {
+    text-transform: uppercase;
+    position: relative;
+    display: block;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-size: cover;
+      left: calc(50% - 20px);
+    }
+  }
+}
+h2.web-design::before {
+  background: url(../images/sprite/sprite.svg#web-design) no-repeat;
+  top: calc(50% - 100px);
+  height: 36px;
+  width: 39px;
+}
+.article {
+  position: relative;
+  a {
+    position: absolute;
+    height: 110px;
+    width: 110px;
+    background: $colorYellow2;
+    display: block;
+    border-radius: 50%;
+    &:hover {
+      background: $backgroundWhite;
+    }
+  }
+}
+.rad-web-design {
+  top: calc(50% - 174px);
+  left: calc(50% - 482px);
+}
+.rad-graphic-design {
+  top: calc(50% - 174px);
+  left: calc(50% - 198px);
+}
+.rad-photography {
+  top: calc(50% - 174px);
+  left: calc(50% - -88px);
+}
+.rad-developing {
+  top: calc(50% - 174px);
+  left: calc(50% - -372px);
+}
+
+h2.graphic-design::before {
+  background: url(../images/sprite/sprite.svg#graphic-design) no-repeat;
+  top: calc(50% - 100px);
+  height: 36px;
+  width: 39px;
+}
+h2.photography::before {
+  background: url(../images/sprite/sprite.svg#photography) no-repeat;
+  top: calc(50% - 100px);
+  height: 36px;
+  width: 39px;
+}
+h2.developing::before {
+  background: url(../images/sprite/sprite.svg#developing) no-repeat;
+  top: calc(50% - 100px);
+  height: 36px;
+  width: 39px;
+}
+.main-wrapper {
+  width: 100%;
+  background: $backgroundDark;
+  height: 470px;
+}
+.dark-theme {
+  h1 {
+    @include textFont(700, 30px, 34px, $colorYellow);
+    padding-top: 65px;
+    padding-bottom: 20px;
+  }
+}
+.dark-articles {
+  h2 {
+    text-transform: uppercase;
+    color: $colorWhite1;
+    position: relative;
+    display: block;
+    &::before {
+      position: absolute;
+      content: "";
+      background-size: cover;
+      bottom: 55px;
+    }
+  }
+}
+.spacer {
+  padding-bottom: 140px;
+}
+.analyse::before {
+  background: url("../images/sprite/sprite.svg#analyse") no-repeat;
+  width: 50px;
+  height: 50px;
+  left: calc(50% - 23px);
+}
+
+.preparing::before {
+  background: url("../images/sprite/sprite.svg#preparing") no-repeat;
+  width: 50px;
+  height: 50px;
+  left: calc(50% - 23px);
+}
+
+.working::before {
+  background: url("../images/sprite/sprite.svg#working") no-repeat;
+  width: 50px;
+  height: 50px;
+  left: calc(50% - 23px);
+}
+.finalyse::before {
+  background: url("../images/sprite/sprite.svg#finalyse") no-repeat;
+  width: 50px;
+  height: 50px;
+  left: calc(50% - 23px);
+}
+.testing::before {
+  background: url("../images/sprite/sprite.svg#testing") no-repeat;
+  width: 50px;
+  height: 50px;
+  left: calc(50% - 23px);
+}
+.deliver::before {
+  background: url("../images/sprite/sprite.svg#deliver") no-repeat;
+  width: 50px;
+  height: 50px;
+  left: calc(50% - 23px);
 }
